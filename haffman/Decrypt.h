@@ -18,10 +18,15 @@ class Decrypt
         ifstream fi;
         ofstream fo;
         Tree_Node* root;
+        //Tree* DecryptTree;
+
+        void BuildNodes(int indicator, vector<char>& vect, int& SizeV, Tree_Node* &put);
+
     public:
         Decrypt(char* FileFromDecrypt, char* FileToDecrypt);
         ~Decrypt(){fi.close(); fo.close();}
-        void Decryption(Tree* MyTree);
+        void Decryption();
+        string BuildTree();
 };
 
 #endif // DECRYPT_H_INCLUDED

@@ -6,14 +6,14 @@
 #include "ValueTable.h"
 #include "HaffmanTable.h"
 #include <vector>
-//#include "Encrypt.h"
+#include "Decrypt.h"
 
-void Encrypt::Encryption(ValueTable* Value, char* NameFileTo)
+void Encrypt::Encryption(ValueTable* Value)
 {
     int cou=0;
     char buf=0;
 
-    ofstream fo(NameFileTo);
+    //ofstream fo(NameFileTo);
 
     Tree MyTree;
 
@@ -23,6 +23,16 @@ void Encrypt::Encryption(ValueTable* Value, char* NameFileTo)
     string str=Value->ReturnStr();
 
     map<char, vector<bool> > HafTable = MyHaf.BuildTable();
+    cout<<"bools"<<endl;
+    for(map<char, vector<bool> >::iterator iter=HafTable.begin(); iter!=HafTable.end(); iter++)
+    {
+        cout<<(*iter).first<<" ";
+        for(vector<bool>::iterator it=(iter->second).begin(); it!=(iter->second).end(); it++)
+        cout<<*it;
+        cout<<endl;
+    }
+
+    MyHaf.WriteVector(output);
 
     for(int i=0; i<str.length(); i++)
     {
@@ -36,7 +46,7 @@ void Encrypt::Encryption(ValueTable* Value, char* NameFileTo)
             if(cou==8)
             {
                 cou=0;
-                fo<<buf;
+                output<<buf;
                 buf=0;
             }
         }
@@ -48,12 +58,16 @@ void Encrypt::Encryption(ValueTable* Value, char* NameFileTo)
         //}
         //fo<<v[j];
     }
-    if(cou)
+    /*if(cou)
     {
         cou=0;
-        fo<<buf;
+        output<<buf;
         buf=0;
-    }
+    }*/
+
+
+    //Decrypt MyDec("result1.txt", "result.txt");
+    //MyDec.Decryption(MyTree);
 
     return;
 }

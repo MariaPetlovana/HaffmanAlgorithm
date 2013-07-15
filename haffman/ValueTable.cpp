@@ -1,4 +1,7 @@
 #include "ValueTable.h"
+//#include <map>
+
+//using namespace std;
 
 void ValueTable::ReturnValueTable()
 {
@@ -25,5 +28,7 @@ ValueTable::ValueTable(char* NameFile)
 map<char, int> ValueTable::BuildTable()
 {
     ReturnValueTable();
+    for(map<char, int>::iterator iter=TableMap.begin(); iter!=TableMap.end(); iter++)
+    cout<<(*iter).first<<" "<<(*iter).second<<endl;
     return TableMap;
 }

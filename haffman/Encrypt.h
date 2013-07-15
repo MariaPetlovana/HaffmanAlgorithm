@@ -13,8 +13,21 @@ using namespace std;
 
 class Encrypt
 {
+    protected:
+        ofstream output;
+
+        //void WriteVector(vector<char> &vect);
+
     public:
-        void Encryption(ValueTable* Value, char* NameFileTo);
+        Encrypt(char* NameFileTo)
+        {
+            output.open(NameFileTo);
+        }
+        ~Encrypt()
+        {
+            output.close();
+        }
+        void Encryption(ValueTable* Value);
 };
 
 

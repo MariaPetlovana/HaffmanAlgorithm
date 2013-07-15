@@ -301,12 +301,16 @@ int main()
     //fo.open("result.txt");
 
     char arr[12]="result1.txt";
-
-    ValueTable* MyValue = new ValueTable("test.txt");
-    Encrypt MyEncrypt;
-    MyEncrypt.Encryption(MyValue, arr);
-    delete MyValue;
     /*
+    ValueTable* MyValue = new ValueTable("test.txt");
+    Encrypt MyEncrypt(arr);
+    MyEncrypt.Encryption(MyValue);
+    delete MyValue;
+    */
+    Decrypt* MyDec = new Decrypt("result1.txt", "result.txt");
+    MyDec->Decryption();
+    delete MyDec;
+     /*
     string str="";
     char ch;
     while(!f.eof() && f.get(ch))

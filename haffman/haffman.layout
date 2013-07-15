@@ -1,43 +1,43 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <CodeBlocks_layout_file>
 	<ActiveTarget name="Debug" />
-	<File name="Decrypt.cpp" open="1" top="0" tabpos="13">
-		<Cursor position="880" topLine="0" />
+	<File name="Decrypt.cpp" open="1" top="1" tabpos="13">
+		<Cursor position="2061" topLine="86" />
 	</File>
 	<File name="Decrypt.h" open="1" top="0" tabpos="12">
-		<Cursor position="188" topLine="0" />
+		<Cursor position="620" topLine="6" />
 	</File>
 	<File name="Encrypt.cpp" open="1" top="0" tabpos="11">
-		<Cursor position="480" topLine="0" />
+		<Cursor position="1488" topLine="48" />
 	</File>
 	<File name="Encrypt.h" open="1" top="0" tabpos="10">
-		<Cursor position="176" topLine="0" />
+		<Cursor position="284" topLine="6" />
 	</File>
 	<File name="HaffmanTable.cpp" open="1" top="0" tabpos="9">
-		<Cursor position="266" topLine="0" />
+		<Cursor position="1518" topLine="48" />
 	</File>
 	<File name="HaffmanTable.h" open="1" top="0" tabpos="8">
-		<Cursor position="383" topLine="5" />
+		<Cursor position="395" topLine="8" />
 	</File>
 	<File name="Table.h" open="1" top="0" tabpos="5">
 		<Cursor position="0" topLine="0" />
 	</File>
 	<File name="Tree.h" open="1" top="0" tabpos="4">
-		<Cursor position="1840" topLine="41" />
+		<Cursor position="2931" topLine="34" />
 	</File>
 	<File name="Tree_Node.cpp" open="1" top="0" tabpos="3">
-		<Cursor position="504" topLine="3" />
+		<Cursor position="401" topLine="15" />
 	</File>
 	<File name="Tree_Node.h" open="1" top="0" tabpos="2">
-		<Cursor position="514" topLine="2" />
+		<Cursor position="283" topLine="6" />
 	</File>
 	<File name="ValueTable.cpp" open="1" top="0" tabpos="7">
-		<Cursor position="0" topLine="0" />
+		<Cursor position="571" topLine="10" />
 	</File>
 	<File name="ValueTable.h" open="1" top="0" tabpos="6">
 		<Cursor position="361" topLine="0" />
 	</File>
-	<File name="main.cpp" open="1" top="1" tabpos="1">
-		<Cursor position="6627" topLine="289" />
+	<File name="main.cpp" open="1" top="0" tabpos="1">
+		<Cursor position="6554" topLine="296" />
 	</File>
 </CodeBlocks_layout_file>

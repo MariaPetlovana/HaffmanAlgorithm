@@ -14,15 +14,19 @@ class Tree_Node
     public:
         int digit;
         char symbol;
-        Tree_Node* l, *r;
+        Tree_Node *l, *r;
 
         Tree_Node(Tree_Node* _left, Tree_Node* _right);
         Tree_Node();
         Tree_Node(Tree_Node* Node);
 
-        bool operator< (const Tree_Node& Node) const
+        void PutLeft(Tree_Node* NodeLeft);
+        void PutRight(Tree_Node* NodeRight);
+
+        bool operator< (const Tree_Node* Node1) const
         {
-            return Node.digit < digit;
+            if(Node1->symbol!=symbol)
+            return Node1->digit > digit;
         }
 };
 

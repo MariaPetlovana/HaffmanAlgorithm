@@ -5,7 +5,7 @@ Tree_Node::Tree_Node(Tree_Node* _left, Tree_Node* _right)
     l=_left;
     r=_right;
     digit=_left->digit+_right->digit;
-    //symbol(_left->symbol){};
+    symbol = (_left->symbol+_right->symbol) >> 1;
 }
 
 Tree_Node::Tree_Node()
@@ -25,4 +25,14 @@ Tree_Node::Tree_Node(Tree_Node* Node)
     *r = *(Node->r);
     digit = Node->digit;
     symbol = Node->symbol;
+}
+
+void Tree_Node::PutLeft(Tree_Node* NodeLeft)
+{
+    l = new Tree_Node(NodeLeft);
+}
+
+void Tree_Node::PutRight(Tree_Node* NodeRight)
+{
+    r = new Tree_Node(NodeRight);
 }

@@ -18,11 +18,16 @@ class HaffmanTable: public Table<char, vector<bool> >
 {
     protected:
         Tree_Node* Node;
+        //int MaxLevel;
         void BuildHaffmanTable(Tree_Node* N, map<char, vector<bool> > &HaffmanTableMap, vector<bool> &b);
+
+        void WriteNode(vector<char> &vect, Tree_Node* Node, int indicator);
+
 
     public:
         HaffmanTable(Tree_Node* TNode);
         virtual map<char, vector<bool> > BuildTable();
+        void WriteVector(ofstream &fo);
 };
 
 #endif // HAFFMANTABLE_H_INCLUDED

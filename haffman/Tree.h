@@ -27,6 +27,16 @@ class Tree
             return l->digit<r->digit;
         }
         */
+        struct MySort
+        {
+            bool operator()(Tree_Node* l, Tree_Node* r) const
+            {
+                //if((l->digit == r->digit) && (l->symbol == r->symbol)) return 1;
+                if(l->digit == r->digit) return l->symbol < r->symbol;
+                return l->digit<r->digit;
+            }
+        };
+
     public:
         Tree()
         {
@@ -40,8 +50,11 @@ class Tree
         {
             return Tree_Root;
         }
-        void CreateTree(set<Tree_Node*> SetTree)
+        void CreateTree(set<Tree_Node*, MySort> SetTree)
         {
+            for(set<Tree_Node*, MySort>::iterator iter=SetTree.begin(); iter!=SetTree.end(); iter++)
+            cout<<(*(*iter)).symbol<<endl;
+
             while(SetTree.size()!=1)
             {
         //ListTree.sort(MySort());
@@ -53,14 +66,24 @@ class Tree
 
             Tree_Node* Parent_Node=new Tree_Node(LNode, RNode);
             SetTree.insert(Parent_Node);
+
+            cout<<endl;
+            for(set<Tree_Node*, MySort>::iterator iter=SetTree.begin(); iter!=SetTree.end(); iter++)
+            cout<<(*(*iter)).symbol<<endl;
+            cout<<endl;
+
             }
 
             Tree_Root = *SetTree.begin();
         }
 
-        set<Tree_Node*> BuildNodes(map<char, int> TreeMap)
+        set<Tree_Node*, MySort> BuildNodes(map<char, int> TreeMap)
         {
-            set<Tree_Node*> TreeSet;
+            set<Tree_Node*, MySort> TreeSet;
+            cout<<endl;
+            for(map<char, int>::iterator iter=TreeMap.begin(); iter!=TreeMap.end(); iter++)
+            cout<<(*iter).first<<" "<<(*iter).second<<endl;
+            cout<<endl;
     //map<D, T>::iterator iter<D, T>;
 
             for(map<char, int>::iterator iter = TreeMap.begin(); iter!=TreeMap.end(); iter++)
@@ -72,8 +95,13 @@ class Tree
                 //delete Node;
             }
 
+            for(set<Tree_Node*, MySort>::iterator iter=TreeSet.begin(); iter!=TreeSet.end(); iter++)
+            cout<<(*(*iter)).symbol<<" "<<(*(*iter)).digit<<endl;
+
             return TreeSet;
         }
+
+
 };
 
 #endif // TREE_H_INCLUDED
