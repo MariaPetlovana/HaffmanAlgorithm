@@ -15,16 +15,15 @@ using namespace std;
 class Decrypt
 {
     protected:
-        ifstream fi;
-        ofstream fo;
-        Tree_Node* root;
-        //Tree* DecryptTree;
+        ifstream m_fi;
+        ofstream m_fo;
+        Tree_Node* m_root;
 
         void BuildNodes(int indicator, vector<char>& vect, int& SizeV, Tree_Node* &put);
 
     public:
         Decrypt(char* FileFromDecrypt, char* FileToDecrypt);
-        ~Decrypt(){fi.close(); fo.close();}
+        ~Decrypt();
         void Decryption();
         string BuildTree();
 };

@@ -14,8 +14,7 @@ template<typename T, typename D>
 class Table
 {
     protected:
-        map<T, D> TableMap;
-        //string str;
+        map<T, D> m_TableMap;
     public:
         virtual map<T, D> BuildTable() = 0;
 };

@@ -17,12 +17,10 @@ using namespace std;
 class HaffmanTable: public Table<char, vector<bool> >
 {
     protected:
-        Tree_Node* Node;
-        //int MaxLevel;
+        Tree_Node* m_Node;
+
         void BuildHaffmanTable(Tree_Node* N, map<char, vector<bool> > &HaffmanTableMap, vector<bool> &b);
-
         void WriteNode(vector<char> &vect, Tree_Node* Node, int indicator);
-
 
     public:
         HaffmanTable(Tree_Node* TNode);

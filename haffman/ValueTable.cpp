@@ -1,34 +1,34 @@
 #include "ValueTable.h"
-//#include <map>
 
-//using namespace std;
+ValueTable::ValueTable(char* NameFile)
+{
+    m_f.open(NameFile);
+}
+
+ValueTable::~ValueTable()
+{
+    m_f.close();
+}
 
 void ValueTable::ReturnValueTable()
 {
-    str="";
+    m_str = "";
     char ch;
 
-    while(!f.eof() && f.get(ch))
+    while(!m_f.eof() && m_f.get(ch))
     {
-        ++TableMap[ch];
-        str+=ch;
+        ++m_TableMap[ch];
+        m_str += ch;
     }
 }
 
 string ValueTable::ReturnStr()
 {
-    return str;
-}
-
-ValueTable::ValueTable(char* NameFile)
-{
-    f.open(NameFile);
+    return m_str;
 }
 
 map<char, int> ValueTable::BuildTable()
 {
     ReturnValueTable();
-    for(map<char, int>::iterator iter=TableMap.begin(); iter!=TableMap.end(); iter++)
-    cout<<(*iter).first<<" "<<(*iter).second<<endl;
-    return TableMap;
+    return m_TableMap;
 }

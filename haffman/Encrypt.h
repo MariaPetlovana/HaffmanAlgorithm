@@ -14,19 +14,12 @@ using namespace std;
 class Encrypt
 {
     protected:
-        ofstream output;
-
-        //void WriteVector(vector<char> &vect);
+        ofstream m_output;
 
     public:
-        Encrypt(char* NameFileTo)
-        {
-            output.open(NameFileTo);
-        }
-        ~Encrypt()
-        {
-            output.close();
-        }
+        Encrypt(char* NameFileTo);
+        ~Encrypt();
+
         void Encryption(ValueTable* Value);
 };
 

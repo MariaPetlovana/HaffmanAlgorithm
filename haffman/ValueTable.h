@@ -6,18 +6,16 @@
 class ValueTable: public Table<char, int>
 {
     protected:
-        string str;
-        ifstream f;
+        string m_str;
+        ifstream m_f;
 
         void ReturnValueTable();
-    public:
-        string ReturnStr();
-        ValueTable(char* NameFile);
-        ~ValueTable()
-        {
-            f.close();
-        }
 
+    public:
+        ValueTable(char* NameFile);
+        ~ValueTable();
+
+        string ReturnStr();
         virtual map<char, int> BuildTable();
 };
 

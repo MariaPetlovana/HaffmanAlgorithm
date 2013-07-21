@@ -39,6 +39,7 @@
 		<Unit filename="HaffmanTable.cpp" />
 		<Unit filename="HaffmanTable.h" />
 		<Unit filename="Table.h" />
+		<Unit filename="Tree.cpp" />
 		<Unit filename="Tree.h" />
 		<Unit filename="Tree_Node.cpp" />
 		<Unit filename="Tree_Node.h" />
